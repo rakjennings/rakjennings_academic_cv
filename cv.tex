@@ -1,0 +1,67 @@
+% !TEX TS-program = luatex
+% USA STEM CV LaTeX Template
+%
+% Author:
+% Sabrina Benge
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+\documentclass[localFont,alternative,monochrome]{documentMETADATA}
+% \usepackage[square,sort,comma,numbers]{natbib}
+% \usepackage{bibentry}
+\usepackage{csquotes}
+\usepackage[backend=biber, style=ieee, maxnames=99, sorting=ynt]{biblatex}
+\usepackage{scrextend}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\name{Rachel Ania}{Kaczka Jennings}
+\tagline{}
+% \photo{2.5cm}{}
+\socialinfo{
+    \email{rakjennings@gmail.com}
+    \smartphone{513-849-9146}
+	\linkedin{rakjennings}
+	\personalLink{https://rakjennings.gitlab.io}
+% 	\address{City, State}
+% 	\infos{U.S. Citizen}
+}
+
+\bibliography{pubs}
+
+\begin{document}
+    \makecvheader
+
+	\makecvfooter
+		{\textsc{}} %\selectlanguage{english}\today
+		{\textsc{Rachel Ania Kaczka Jennings}}
+		{\thepage}
+		
+	
+
+% 	\input{section_headline}                % Research Statement
+	\input{section_edu}			% Section Honors and Awards
+	\input{section_experience}	        	% Section Professional Experience
+	\input{section_outreach_volunteering}   % Section Professional Outreach and volunteering
+       % Section Publications, presentations,...
+% 	\input{section_languages}				% Section languages
+	%\input{section_interets}				% Section interests
+	\input{section_projects}                % Section Projects
+	\newpage
+	\input{section_publications_etc} 
+% 	\input{section_teaching_mentoring}      % Section Teaching and Mentoring
+	\input{section_certifications}          % Section Certifications
+% 	\input{section_skills}				    % Section Skills
+% 	\input{section_references} 				% Section references
+
+
+\end{document}
